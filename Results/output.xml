@@ -1,87 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.11.0 on darwin)" generated="20221103 09:48:12.094" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.11.0 on darwin)" generated="20221103 10:30:49.097" rpa="false" schemaversion="3">
 <suite id="s1" name="Chooseregion" source="/Users/akankshautkarsh/PycharmProjects/pythonProject/Tests/Abbott/Chooseregion.robot">
 <test id="s1-t1" name="Login as France" line="13">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pat.libreview.io/.</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221103 09:48:12.365" level="INFO">Opening browser 'chrome' to base url 'https://pat.libreview.io/.'.</msg>
-<status status="PASS" starttime="20221103 09:48:12.364" endtime="20221103 09:48:19.357"/>
+<msg timestamp="20221103 10:30:49.367" level="INFO">Opening browser 'chrome' to base url 'https://pat.libreview.io/.'.</msg>
+<status status="PASS" starttime="20221103 10:30:49.367" endtime="20221103 10:30:58.720"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221103 09:48:19.357" endtime="20221103 09:48:19.526"/>
+<status status="PASS" starttime="20221103 10:30:58.720" endtime="20221103 10:30:58.888"/>
 </kw>
 <kw name="Select country and language" library="Landingpage">
 <arg>${SelectFR}</arg>
 <arg>${SelectFrench}</arg>
 <tag>Functional</tag>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//*[@id="countryDropdown"]/li//*[@value='DE']</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221103 09:48:19.527" endtime="20221103 09:48:19.540"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:21.541" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221103 09:48:19.541" endtime="20221103 09:48:21.541"/>
-</kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${ele}</var>
 <arg>${SelectCountry}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221103 09:48:21.551" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00a17d1a4ab66c39dd8dfe042ed79c5a", element="cc3fc759-be6c-4815-b48f-74d89a326cde")&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:21.542" endtime="20221103 09:48:21.551"/>
+<msg timestamp="20221103 10:30:58.902" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="413a3bdfa4f89c228aa1b83c666dd01b", element="a44a0d1a-70db-46f1-98dc-57cb1a64d3d1")&gt;</msg>
+<status status="PASS" starttime="20221103 10:30:58.889" endtime="20221103 10:30:58.902"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>ARGUMENTS</arg>
 <arg>${ele}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221103 09:48:21.552" level="INFO">Executing JavaScript:
+<msg timestamp="20221103 10:30:58.904" level="INFO">Executing JavaScript:
 arguments[0].click();
 By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="00a17d1a4ab66c39dd8dfe042ed79c5a", element="cc3fc759-be6c-4815-b48f-74d89a326cde")&gt;'</msg>
-<status status="PASS" starttime="20221103 09:48:21.551" endtime="20221103 09:48:21.567"/>
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="413a3bdfa4f89c228aa1b83c666dd01b", element="a44a0d1a-70db-46f1-98dc-57cb1a64d3d1")&gt;'</msg>
+<status status="PASS" starttime="20221103 10:30:58.903" endtime="20221103 10:30:58.923"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:22.569" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221103 09:48:21.567" endtime="20221103 09:48:22.569"/>
+<msg timestamp="20221103 10:30:59.926" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221103 10:30:58.924" endtime="20221103 10:30:59.926"/>
 </kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${ele1}</var>
 <arg>${Selectlanguage}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221103 09:48:22.589" level="INFO">${ele1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00a17d1a4ab66c39dd8dfe042ed79c5a", element="c97c3039-7fa1-4b43-acec-bb2383ebc431")&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:22.569" endtime="20221103 09:48:22.589"/>
+<msg timestamp="20221103 10:30:59.948" level="INFO">${ele1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="413a3bdfa4f89c228aa1b83c666dd01b", element="32fc42e3-5274-4e10-8e6c-a8f9797d048c")&gt;</msg>
+<status status="PASS" starttime="20221103 10:30:59.927" endtime="20221103 10:30:59.948"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>ARGUMENTS</arg>
 <arg>${ele1}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221103 09:48:22.591" level="INFO">Executing JavaScript:
+<msg timestamp="20221103 10:30:59.950" level="INFO">Executing JavaScript:
 arguments[0].click();
 By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="00a17d1a4ab66c39dd8dfe042ed79c5a", element="c97c3039-7fa1-4b43-acec-bb2383ebc431")&gt;'</msg>
-<status status="PASS" starttime="20221103 09:48:22.589" endtime="20221103 09:48:22.608"/>
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="413a3bdfa4f89c228aa1b83c666dd01b", element="32fc42e3-5274-4e10-8e6c-a8f9797d048c")&gt;'</msg>
+<status status="PASS" starttime="20221103 10:30:59.948" endtime="20221103 10:30:59.966"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:19.526" endtime="20221103 09:48:22.608"/>
+<status status="PASS" starttime="20221103 10:30:58.888" endtime="20221103 10:30:59.967"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20221103 09:48:22.996" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:22.608" endtime="20221103 09:48:22.996"/>
+<msg timestamp="20221103 10:31:00.375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221103 10:30:59.967" endtime="20221103 10:31:00.375"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221103 09:48:22.997" level="INFO">Clicking element 'xpath=//*[@id="modalSubmit"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:22.997" endtime="20221103 09:48:23.476"/>
+<msg timestamp="20221103 10:31:00.376" level="INFO">Clicking element 'xpath=//*[@id="modalSubmit"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:00.375" endtime="20221103 10:31:01.158"/>
 </kw>
 <kw name="Accept Cookies">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -92,11 +81,11 @@ By using argument:
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//*[@id="truste-consent-button"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221103 09:48:23.503" level="INFO">Element '//*[@id="truste-consent-button"]' is displayed.</msg>
-<status status="PASS" starttime="20221103 09:48:23.477" endtime="20221103 09:48:23.503"/>
+<msg timestamp="20221103 10:31:01.182" level="INFO">Element '//*[@id="truste-consent-button"]' is displayed.</msg>
+<status status="PASS" starttime="20221103 10:31:01.159" endtime="20221103 10:31:01.182"/>
 </kw>
-<msg timestamp="20221103 09:48:23.503" level="INFO">${present} = True</msg>
-<status status="PASS" starttime="20221103 09:48:23.477" endtime="20221103 09:48:23.503"/>
+<msg timestamp="20221103 10:31:01.182" level="INFO">${present} = True</msg>
+<status status="PASS" starttime="20221103 10:31:01.159" endtime="20221103 10:31:01.182"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${present}</arg>
@@ -106,120 +95,109 @@ By using argument:
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="truste-consent-button"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221103 09:48:23.504" level="INFO">Clicking element '//*[@id="truste-consent-button"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:23.503" endtime="20221103 09:48:23.544"/>
+<msg timestamp="20221103 10:31:01.183" level="INFO">Clicking element '//*[@id="truste-consent-button"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:01.183" endtime="20221103 10:31:01.225"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:23.503" endtime="20221103 09:48:23.544"/>
+<status status="PASS" starttime="20221103 10:31:01.182" endtime="20221103 10:31:01.225"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:23.476" endtime="20221103 09:48:23.544"/>
+<status status="PASS" starttime="20221103 10:31:01.159" endtime="20221103 10:31:01.225"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:24.545" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221103 09:48:23.544" endtime="20221103 09:48:24.545"/>
+<msg timestamp="20221103 10:31:02.226" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221103 10:31:01.225" endtime="20221103 10:31:02.226"/>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${PatientHeader}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20221103 09:48:24.564" level="INFO">Current page does not contain element 'xpath=//*[@id="patHeaderLink"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:24.546" endtime="20221103 09:48:24.564"/>
+<msg timestamp="20221103 10:31:02.246" level="INFO">Current page does not contain element 'xpath=//*[@id="patHeaderLink"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:02.227" endtime="20221103 10:31:02.246"/>
 </kw>
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${ProfessionalHeader}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20221103 09:48:24.571" level="INFO">Current page does not contain element 'xpath=//*[@id="patHeaderLink"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:24.564" endtime="20221103 09:48:24.571"/>
+<msg timestamp="20221103 10:31:02.256" level="INFO">Current page does not contain element 'xpath=//*[@id="patHeaderLink"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:02.246" endtime="20221103 10:31:02.256"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221103 09:48:24.572" endtime="20221103 09:48:24.667"/>
+<status status="PASS" starttime="20221103 10:31:02.256" endtime="20221103 10:31:02.350"/>
 </kw>
 <doc>Select Region</doc>
 <tag>Functional Test</tag>
-<status status="PASS" starttime="20221103 09:48:12.364" endtime="20221103 09:48:24.668"/>
+<status status="PASS" starttime="20221103 10:30:49.366" endtime="20221103 10:31:02.350"/>
 </test>
 <test id="s1-t2" name="Login as US" line="28">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://pat.libreview.io/.</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221103 09:48:24.671" level="INFO">Opening browser 'chrome' to base url 'https://pat.libreview.io/.'.</msg>
-<status status="PASS" starttime="20221103 09:48:24.670" endtime="20221103 09:48:32.311"/>
+<msg timestamp="20221103 10:31:02.352" level="INFO">Opening browser 'chrome' to base url 'https://pat.libreview.io/.'.</msg>
+<status status="PASS" starttime="20221103 10:31:02.351" endtime="20221103 10:31:09.608"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221103 09:48:32.311" endtime="20221103 09:48:32.480"/>
+<status status="PASS" starttime="20221103 10:31:09.608" endtime="20221103 10:31:09.773"/>
 </kw>
 <kw name="Select country and language" library="Landingpage">
 <arg>${SelectUS}</arg>
 <arg>${SelectEnglish}</arg>
 <tag>Functional</tag>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>//*[@id="countryDropdown"]/li//*[@value='DE']</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221103 09:48:32.481" endtime="20221103 09:48:32.493"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:34.496" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221103 09:48:32.493" endtime="20221103 09:48:34.496"/>
-</kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${ele}</var>
 <arg>${SelectCountry}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221103 09:48:34.514" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c233db5ae9687a0f7229c69feb537cc2", element="5f38472f-e2c9-431a-9573-75f183ddf39b")&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:34.496" endtime="20221103 09:48:34.515"/>
+<msg timestamp="20221103 10:31:09.786" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="526c048fd300643a06ffaa7303073e60", element="466e81fb-9b8e-4142-a4da-5678d0ec3d47")&gt;</msg>
+<status status="PASS" starttime="20221103 10:31:09.773" endtime="20221103 10:31:09.786"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>ARGUMENTS</arg>
 <arg>${ele}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221103 09:48:34.516" level="INFO">Executing JavaScript:
+<msg timestamp="20221103 10:31:09.787" level="INFO">Executing JavaScript:
 arguments[0].click();
 By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="c233db5ae9687a0f7229c69feb537cc2", element="5f38472f-e2c9-431a-9573-75f183ddf39b")&gt;'</msg>
-<status status="PASS" starttime="20221103 09:48:34.515" endtime="20221103 09:48:34.533"/>
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="526c048fd300643a06ffaa7303073e60", element="466e81fb-9b8e-4142-a4da-5678d0ec3d47")&gt;'</msg>
+<status status="PASS" starttime="20221103 10:31:09.786" endtime="20221103 10:31:09.807"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:35.536" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221103 09:48:34.534" endtime="20221103 09:48:35.536"/>
+<msg timestamp="20221103 10:31:10.810" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221103 10:31:09.807" endtime="20221103 10:31:10.810"/>
 </kw>
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${ele1}</var>
 <arg>${Selectlanguage}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221103 09:48:35.554" level="INFO">${ele1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c233db5ae9687a0f7229c69feb537cc2", element="ee195f14-fb63-41bb-8fa5-4b3163b5c196")&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:35.536" endtime="20221103 09:48:35.554"/>
+<msg timestamp="20221103 10:31:10.829" level="INFO">${ele1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="526c048fd300643a06ffaa7303073e60", element="17fb8353-c1f7-4473-9359-e9b7d4459ad5")&gt;</msg>
+<status status="PASS" starttime="20221103 10:31:10.810" endtime="20221103 10:31:10.829"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>arguments[0].click();</arg>
 <arg>ARGUMENTS</arg>
 <arg>${ele1}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20221103 09:48:35.556" level="INFO">Executing JavaScript:
+<msg timestamp="20221103 10:31:10.831" level="INFO">Executing JavaScript:
 arguments[0].click();
 By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="c233db5ae9687a0f7229c69feb537cc2", element="ee195f14-fb63-41bb-8fa5-4b3163b5c196")&gt;'</msg>
-<status status="PASS" starttime="20221103 09:48:35.554" endtime="20221103 09:48:35.571"/>
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="526c048fd300643a06ffaa7303073e60", element="17fb8353-c1f7-4473-9359-e9b7d4459ad5")&gt;'</msg>
+<status status="PASS" starttime="20221103 10:31:10.829" endtime="20221103 10:31:10.846"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:32.481" endtime="20221103 09:48:35.571"/>
+<status status="PASS" starttime="20221103 10:31:09.773" endtime="20221103 10:31:10.846"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20221103 09:48:35.950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221103 09:48:35.571" endtime="20221103 09:48:35.950"/>
+<msg timestamp="20221103 10:31:11.222" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221103 10:31:10.846" endtime="20221103 10:31:11.222"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221103 09:48:35.950" level="INFO">Clicking element 'xpath=//*[@id="modalSubmit"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:35.950" endtime="20221103 09:48:36.601"/>
+<msg timestamp="20221103 10:31:11.222" level="INFO">Clicking element 'xpath=//*[@id="modalSubmit"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:11.222" endtime="20221103 10:31:11.597"/>
 </kw>
 <kw name="Accept Cookies">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -230,11 +208,11 @@ By using argument:
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>//*[@id="truste-consent-button"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221103 09:48:36.628" level="INFO">Element '//*[@id="truste-consent-button"]' is displayed.</msg>
-<status status="PASS" starttime="20221103 09:48:36.603" endtime="20221103 09:48:36.628"/>
+<msg timestamp="20221103 10:31:11.618" level="INFO">Element '//*[@id="truste-consent-button"]' is displayed.</msg>
+<status status="PASS" starttime="20221103 10:31:11.598" endtime="20221103 10:31:11.618"/>
 </kw>
-<msg timestamp="20221103 09:48:36.628" level="INFO">${present} = True</msg>
-<status status="PASS" starttime="20221103 09:48:36.602" endtime="20221103 09:48:36.628"/>
+<msg timestamp="20221103 10:31:11.618" level="INFO">${present} = True</msg>
+<status status="PASS" starttime="20221103 10:31:11.598" endtime="20221103 10:31:11.618"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${present}</arg>
@@ -244,36 +222,40 @@ By using argument:
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="truste-consent-button"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221103 09:48:36.628" level="INFO">Clicking element '//*[@id="truste-consent-button"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:36.628" endtime="20221103 09:48:36.671"/>
+<msg timestamp="20221103 10:31:11.619" level="INFO">Clicking element '//*[@id="truste-consent-button"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:11.619" endtime="20221103 10:31:11.658"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:36.628" endtime="20221103 09:48:36.671"/>
+<status status="PASS" starttime="20221103 10:31:11.618" endtime="20221103 10:31:11.658"/>
 </kw>
-<status status="PASS" starttime="20221103 09:48:36.602" endtime="20221103 09:48:36.671"/>
+<status status="PASS" starttime="20221103 10:31:11.598" endtime="20221103 10:31:11.658"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221103 09:48:37.672" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20221103 09:48:36.671" endtime="20221103 09:48:37.672"/>
+<msg timestamp="20221103 10:31:12.659" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221103 10:31:11.658" endtime="20221103 10:31:12.659"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${PatientHeader}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20221103 09:48:37.691" level="INFO">Current page contains element 'xpath=//*[@id="patHeaderLink"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:37.673" endtime="20221103 09:48:37.691"/>
+<msg timestamp="20221103 10:31:12.677" level="INFO">Current page contains element 'xpath=//*[@id="patHeaderLink"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:12.659" endtime="20221103 10:31:12.677"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${ProfessionalHeader}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20221103 09:48:37.699" level="INFO">Current page contains element 'xpath=//*[@id="patHeaderLink"]'.</msg>
-<status status="PASS" starttime="20221103 09:48:37.692" endtime="20221103 09:48:37.699"/>
+<msg timestamp="20221103 10:31:12.685" level="INFO">Current page contains element 'xpath=//*[@id="patHeaderLink"]'.</msg>
+<status status="PASS" starttime="20221103 10:31:12.677" endtime="20221103 10:31:12.685"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221103 10:31:12.685" endtime="20221103 10:31:12.771"/>
 </kw>
 <doc>Select Region</doc>
 <tag>Functional Test</tag>
-<status status="PASS" starttime="20221103 09:48:24.669" endtime="20221103 09:48:37.699"/>
+<status status="PASS" starttime="20221103 10:31:02.351" endtime="20221103 10:31:12.772"/>
 </test>
-<status status="PASS" starttime="20221103 09:48:12.098" endtime="20221103 09:48:37.700"/>
+<status status="PASS" starttime="20221103 10:30:49.099" endtime="20221103 10:31:12.772"/>
 </suite>
 <statistics>
 <total>
